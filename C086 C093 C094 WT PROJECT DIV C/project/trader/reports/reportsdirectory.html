@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  border-image-source: "https://img.icons8.com/pastel-glyph/2x/search.png";
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid black;
+  margin-bottom: 12px;
+  border-radius: 25px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(0,123,255);
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: rgb(0,123,255);
+}
+
+</style>
+</head>
+<body>
+  <p><center><img src="https://media2.giphy.com/media/6k9CcAl36voZx7MvF0/giphy.gif ">
+  </center></p>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+  <a style="color: black;font-size: 35px;" class="navbar-brand" href="#">Stockie.com</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="../../php/homepage.php">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../php/buyform.php">Place Order</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../php/sellform.php">Sell Stock</a>
+      </li>
+      
+  <li class="nav-item">
+        <a class="nav-link" href="../PORTFOLIO/sportfolioo.html">Superstar's Portfolio</a>
+      </li>
+      <li class="nav-item">
+  <a class="nav-link" href="../TRADINGOUTLOOKS/blog.html">Trade Outlooks<span class="sr-only">(current)</span></a>
+ </li>
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Investopedia
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="../investopedia/courses/course.html">Courses</a>
+        <a class="dropdown-item" href="../investopedia/ebook/ebook.html">Ebook</a>
+      </div>
+    </li>
+ <li class="nav-item">
+  <a class="nav-link" href="../reports/reportsdirectory.html">Reports</a>
+ </li>
+ 
+      <li class="nav-item">
+        <a class="nav-link" href="../abtus/about.html">About Us</a>
+      </li>
+
+
+
+
+    </ul>
+    
+  </div>
+</div>
+</nav>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+<div class="tradingview-widget-container__widget"></div>
+<div class="tradingview-widget-copyright"><a href="https://in.tradingview.com" rel="noopener" target="_blank"><span class="blue-text"></span></a> </div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+{
+"symbols": [
+  {
+    "description": "SENSEX",
+    "proName": "INDEX:SENSEX"
+  },
+  {
+    "description": "Dow Jones",
+    "proName": "CURRENCYCOM:US30"
+  },
+  {
+    "description": "S&P500",
+    "proName": "CURRENCYCOM:US500"
+  },
+  {
+    "description": "Bovespa",
+    "proName": "INDEX:JZY0"
+  },
+  {
+    "description": "DAX",
+    "proName": "CURRENCYCOM:DE30"
+  },
+  {
+    "description": "FTSE",
+    "proName": "CURRENCYCOM:UK100"
+  },
+  {
+    "description": "CAC",
+    "proName": "INDEX:CAC40"
+  },
+  {
+    "description": "FTSE MIB",
+    "proName": "INDEX:FTSEMIB"
+  },
+  {
+    "description": "Nikkei 225",
+    "proName": "INDEX:NKY"
+  },
+  {
+    "description": "SZSE Component",
+    "proName": "SZSE:399106"
+  },
+  {
+    "description": "Hang Seng",
+    "proName": "INDEX:HSI"
+  },
+  {
+    "description": "KOSPI",
+    "proName": "INDEX:KSIC"
+  },
+  {
+    "description": "KLCI",
+    "proName": "INDEX:KLSE"
+  },
+  {
+    "description": "Nasdaq",
+    "proName": "NASDAQ:NDX"
+  },
+  {
+    "description": "IBEX",
+    "proName": "CURRENCYCOM:SP35"
+  },
+  {
+    "description": "Tadawul All Share",
+    "proName": "TADAWUL:MT30"
+  }
+],
+"colorTheme": "light",
+"isTransparent": false,
+"displayMode": "adaptive",
+"locale": "in"
+}
+</script>
+</div>
+<center>
+<h2 style="font-size: 50px;font-family: verdana; ">Reports</h2>
+<p style="font-style: 25px;font-family: calluna sans;"> 
+  A broad-base stock market report is an information-based document that illustrates the performance of the stock market as a whole. ... Stock market reports may also give potential investors valuable information regarding investments made in a particular industry, such as the motor vehicle industry or the financial sector.
+  <strong>
+  We At Stockie.com have curated reports from the top broking firms in India. You Can use it for your personal research. These Reports are purely research based. Please Contact your Financial Adviser before investing in any entity.
+</strong> 
+</p>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Stocks" title="Type in a name"  >
+</center>
+<table id="myTable">
+  <tr class="header">
+    <th style="width:50%;">Name of Script</th>
+    <th style="width:40%;">Report By</th>
+    <th style="width: 50%;">Download</th>
+    
+  </tr>
+</tr>
+<tr>
+ <td>Adani Ports</td>
+ <td>Dolat Analysis</td>
+ <td>
+   <a href="adaniports.pdf" download>
+   Download
+ </a>
+ </td>
+</tr>
+<tr>
+ <td>Asian Paints</td>
+ <td>Geojit</td>
+ <td>
+   <a href="asianpaints.pdf" download>Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Axis Bank</td>
+ <td>Geojit</td>
+ <td>
+   <a href="axisbank.pdf" download>Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bajaj Auto</td>
+ <td>Axis Securities</td>
+ <td>
+   <a href="bajaj%20auto.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bajaj Finance</td>
+ <td>Geojit</td>
+ <td>
+   <a href="bajajfinance.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bajaj Finserv</td>
+ <td>Karvy Stock Broking</td>
+ <td>
+   <a href="bajajfinserv.pdf" download="" id="dtext">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bharti Airtel</td>
+ <td>Sharekhan</td>
+ <td>
+   <a href="airtel.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bharti Infratel</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="bharti%20infratel.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Bharat Petro Chemical Limited</td>
+ <td>Geojit</td>
+ <td>
+   <a href="bpcl.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Britannia</td>
+ <td>Geojit</td>
+ <td>
+   <a href="brittania.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Cipla</td>
+ <td>Institutional Research</td>
+ <td>
+   <a href="cipla.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Coal India</td>
+ <td>Motilal Oswal</td>
+ <td>
+   <a href="coalindia.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Dr Reddy's Lab</td>
+ <td>ICICI Direct </td>
+ <td>
+   <a href="drl.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Eicher Motors</td>
+ <td>Geojit</td>
+ <td>
+   <a href="eicher.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+<tr>
+ <td>Federal Bank</td>
+ <td>LKP</td>
+ <td>
+   <a href="fedbk.pdf" download="">Download</a>
+ </td>
+</tr>
+ <td>GAIL Ltd.</td>
+ <td>Institutional Research</td>
+ <td>
+   <a href="gail.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Grasim</td>
+ <td>SMC</td>
+ <td>
+   <a href="grasim.pdf">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>HCL Technologies</td>
+ <td>Geojit</td>
+ <td>
+   <a href="hcl.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>HDFC</td>
+ <td>Geojit</td>
+ <td>
+   <a href="hdfc.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>HDFC Bank</td>
+ <td>Nirmal Bang</td>
+ <td>
+   <a href="hdfcbank.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>HDFC Life</td>
+ <td>Karvy Stock Broking</td>
+ <td>
+   <a href="hdfclife.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Hero MotoCorp</td>
+ <td>Geojit</td>
+ <td>
+   <a href="heromoto.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Hindalco Industries Limited</td>
+ <td>Geojit</td>
+ <td>
+   <a href="hindalco.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Hindustan Unilever</td>
+ <td>Motilal Oswal</td>
+ <td>
+   <a href="hul.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>ICICI Bank</td>
+ <td>Nirmal Bang</td>
+ <td>
+   <a href="icicibank.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Indusind Bank</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="indusindbank.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Infosys</td>
+ <td>Motilal Oswal</td>
+ <td>
+   <a href="infosys.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Indian Oil Corporation</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="ioc.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>ITC</td>
+ <td>Axis Securities</td>
+ <td>
+   <a href="itc.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>JSW Steel</td>
+ <td>Motilal Oswal</td>
+ <td>
+   <a href="jswsteel.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Kotak Mahindra Bank</td>
+ <td>Geojit</td>
+ <td>
+   <a href="kotak.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Larsen and Toubro</td>
+ <td>Emkay</td>
+ <td>
+   <a href="lt.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Mahindra & Mahindra</td>
+ <td>Geojit</td>
+ <td>
+   <a href="mahindra%20and%20mahindra.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Maruti Suzuki</td>
+ <td>Geojit</td>
+ <td>
+   <a href="marutisuzu.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Nestle</td>
+ <td>Institutional Research</td>
+ <td>
+   <a href="nestle.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>NTPC</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="ntpc.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>ONGC</td>
+ <td>IDBI Capital</td>
+ <td>
+   <a href="ongc.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Powergrid Corporation of India Ltd. </td>
+ <td>Geojit</td>
+ <td>
+   <a href="powergrid.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+<td>Punjab National Bank</td>
+<td>Geojit</td>
+<td>
+ <a href="punjabnb.pdf" download="">Download</a>
+</td>
+</tr>
+<tr>
+ <td>Reliance</td>
+ <td>Geojit</td>
+ <td>
+   <a href="reliance.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>State Bank of India</td>
+ <td>Axis Securities</td>
+ <td>
+   <a href="sbi.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Shree Cements </td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="shreecements.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Sun Pharma</td>
+ <td>KR Choksey</td>
+ <td>
+   <a href="sunpharma.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Tata Motors</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="tatamotors.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Tata Steel</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="tatasteel.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Tata Consultancy Services</td>
+ <td>Geojit</td>
+ <td>
+   <a href="tcs.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Tech Mahindra </td>
+ <td>Geojit</td>
+ <td>
+   <a href="techmahindra.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Titan Company Limited</td>
+ <td>Geojit</td>
+ <td>
+   <a href="titan.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Utratech Cement</td>
+ <td>ICICI Direct</td>
+ <td>
+   <a href="ultratechcement.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>UPL</td>
+ <td>Geojit</td>
+ <td>
+   <a href="upl.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>Wipro</td>
+ <td>Motilal Oswal</td>
+ <td>
+   <a href="wipro.pdf" download="">Download</a>
+ </td>
+</tr>
+<tr>
+ <td>ZEE Entertainment Enterprises Ltd. </td>
+ <td>Geojit</td>
+ <td>
+   <a href="zeel.pdf" download="">Download</a>
+ </td>
+</tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+<center>
+  <h5>Special Thanks To Dolat Analysis,Geojit,Axis Securities,Karvy Stock Broking,Sharekhan,ICICI Direct,Institutional Research,Motilal Oswal,SMC,Nirmal Bang for their Precise Reports</h5>
+  © 2021 Stockie.com 
+</center>
+
+</body>
+
+</body>
+</html>
