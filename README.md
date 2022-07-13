@@ -1,4 +1,4 @@
-# stockie.com🚀
+# Stockie.com🚀
 
 There are so many young generations of people who are so much interested into financial markets but are a bit afraid of the consequences if they fail. These are the people who wouldn’t want to loose their initial capital. So finding a solution like this was of utmost importance. Here people with 0 experience about financial markets can participate in the market without having to invest their own saving. The platform integrated with Stockie.com have made and innovated a mock trading platform.
 
